@@ -10,6 +10,9 @@
   "author": "BlackBeard",
   "license": "GPL-3.0",
   "dependencies": {
-    "mongodb": "^2.2.29"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29",
+    "mongoose": "^4.11.1"
   }
 }
