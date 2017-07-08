@@ -17,11 +17,20 @@ app.post('/todos', (req,res) => {
     completedAt: req.body.completedAt
   });
 
-  todo.save().then((doc)=>{
+  todo.save().then((doc) => {
     res.send(doc);
   },(e)=>{
     res.status(400).send(e);
   });
+});
+
+app.get('/todos', (req, res) => {
+  Todo.find().then((todos) => {
+    res.status(400).send({todos});
+  }, (e) => {
+    res.send(e);
+  });
+
 });
 
 
